@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script lang="javascript">
+            document.writeln("<br>Browsername"+navigator.appCodeName);
+            document.writeln("<br>WebBrowsername"+navigator.appName);
+            document.writeln("<br> Browser version"+navigator.appVersion);
+            document.writeln("<br>Operating platform"+navigator.platform);
+            document.writeln("<br>Useragent"+navigator.userAgent);
+            day=new Array(7);
+            day[0]="sunday"
+            day[1]="monday"
+            day[2]="tuesday"
+            day[3]="wednesday"
+            day[4]="thursday"
+            day[5]="friday"
+            day[6]="saturday"
+            var c=0;
+            while(c<=6)
+            {
+                document.write(day[c]+"<br>");
+                c++;
+            }
+            var c=5;
+            while(c<=10)
+           {
+            document.write("random number"+Math.random()*c)+"<br>";
+            c++;
+           }
+        </script>
+    </body>
+</html>

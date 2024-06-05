@@ -1,0 +1,6 @@
+<!Doctype employee[
+<!Element employee(name,instituon,email)>
+<!Element name(#PCDATA)>
+<!Element institution(#PCDATA)>
+<!Element email(#PCDATA)>    
+]>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bucket List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        body,
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            background-color: #081b29;
+            color: #333;
+            padding: 20px;
+
+
+            .poppins-medium {
+                font-family: "Poppins", serif;
+                font-weight: 500;
+                font-style: Medium;
+            }
+        }
+
+
+        nav {
+
+            li,
+            h1,
+            ul {
+                display: inline;
+            }
+
+            ul {
+                margin-left: 68%;
+            }
+
+            li {
+                color: white;
+                cursor: pointer;
+            }
+
+            li:hover {
+                color: #FFEB3B;
+            }
+
+            background-color: #536878;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .bucket-list-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #536878;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .bucket-list-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .bucket-list-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .bucket-list-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .bucket-list-item .content {
+            padding: 15px;
+        }
+
+        .bucket-list-item .content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .bucket-list-item .content p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .bucket-list-item i {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+
+        .bucket-list-item.completed {
+            border: 2px solid green;
+        }
+
+        footer {
+            background-color: #536878;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FFEB3B;
+            /* A golden color on hover */
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                font-size: 12px;
+            }
+
+            .social-links a {
+                font-size: 20px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .bucket-list-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <h1 class="poppins-regular">Personal Bucket List</h1>
+            <ul class="poppins-regular">
+                <li>Home |</li>
+                <li> About us |</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="bucket-list-container">
+        <div class="bucket-list-item completed">
+            <img src="https://images.unsplash.com/photo-1533772263582-234dbbf7d313" alt="Visit Japan">
+            <div class="content">
+                <h3><i class="fas fa-check"></i> Visit Japan</h3>
+                <p>Explore the beautiful culture, technology, and nature of Japan.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1534793764239-bc5c7b39547f" alt="Learn to play guitar">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Learn to play guitar</h3>
+                <p>Master the strings and create beautiful melodies.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item completed">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af1b8" alt="Go skydiving">
+            <div class="content">
+                <h3><i class="fas fa-check"></i> Go skydiving</h3>
+                <p>Feel the adrenaline rush as you dive from thousands of feet in the air.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1506748686210-1a41666088e4" alt="Write a book">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Write a book</h3>
+                <p>Write a novel that will inspire and entertain others.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1529227321802-7b2ff9816a47" alt="Travel to Paris">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Travel to Paris</h3>
+                <p>Visit the Eiffel Tower, the Louvre, and enjoy the romance of Paris.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1579578916334-0f3f8d330ec7" alt="Climb Mount Everest">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Climb Mount Everest</h3>
+                <p>Conquer the world's highest peak and experience the thrill of adventure.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1545071096-5c7f58e8a541" alt="Swim with dolphins">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Swim with dolphins</h3>
+                <p>Experience the joy and connection with these friendly marine creatures.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item completed">
+            <img src="https://images.unsplash.com/photo-1506765515381-352ddf5c9e3b" alt="Learn to cook">
+            <div class="content">
+                <h3><i class="fas fa-check"></i> Learn to cook</h3>
+                <p>Become a master in the kitchen and cook delicious meals.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1534779785376-39e9c8196b45" alt="Take a hot air balloon ride">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Take a hot air balloon ride</h3>
+                <p>Float through the sky and enjoy panoramic views from above.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1565760932-d7347a32c601" alt="Go on a road trip">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Go on a road trip across the country</h3>
+                <p>Discover new places and experience freedom on the open road.</p>
+            </div>
+        </div>
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1533772264796-6e9c59d730cc" alt="Volunteer abroad">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Volunteer abroad</h3>
+                <p>Help communities around the world and make a positive impact.</p>
+            </div>
+        </div>
+
+
+        <div class="bucket-list-item">
+            <img src="https://images.unsplash.com/photo-1530424524166-167a38d3a800" alt="Learn to surf">
+            <div class="content">
+                <h3><i class="fas fa-star"></i> Learn to surf</h3>
+                <p>Catch the perfect wave and ride the surf.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>This page Made by Always Kumaran</p>
+            <p>&copy; 2025 My Bucket List. All Rights Reserved By Always Kumaran.</p>
+            <div class="social-links">
+                <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .gender-options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button.submit-btn {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button.submit-btn:hover {
+            background-color:darkblue;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .registration-form {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            button.submit-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST" class="registration-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="Male" required> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="Female"> Female
+                    </label>
+                    <label for="other">
+                        <input type="radio" id="other" name="gender" value="Other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="qualification">Educational Qualification:</label>
+                <select id="qualification" name="qualification" required>
+                    <option value="" disabled selected>Select your qualification</option>
+                    <option value="High School">High School</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="PhD">PhD</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+         <label style="padding: 20px; text-align: center;">This page is created by AlwaysKumaran</label>
+         <div style="text-align: center; padding: 20px;"
+         <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+         <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+         <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+         <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+         </div>
+    </div>
+</body>
+</html>
